@@ -20,13 +20,67 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Csu-Kb-YUf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Z-Am-Da4">
+                                <rect key="frame" x="276" y="538" width="52" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Satélite">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Satelite" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zba-1g-Njk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmR-Os-vRm">
+                                <rect key="frame" x="378" y="538" width="51" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Híbrido">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Hibrido" destination="BYZ-38-t0r" eventType="touchUpInside" id="oe5-WA-T7q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avp-NI-tbT">
+                                <rect key="frame" x="172" y="538" width="63" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Standard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Standard" destination="BYZ-38-t0r" eventType="touchUpInside" id="oF4-Dj-fH2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="AIa-RG-LsL"/>
-                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DaI-WW-JBD"/>
-                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pVm-Fb-AFe"/>
-                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4i-to-b0c"/>
+                            <constraint firstItem="f4Z-Am-Da4" firstAttribute="baseline" secondItem="pmR-Os-vRm" secondAttribute="baseline" id="5r1-uf-7w1"/>
+                            <constraint firstItem="f4Z-Am-Da4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="CvZ-0c-bpt"/>
+                            <constraint firstItem="f4Z-Am-Da4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="FRH-Z4-Al2"/>
+                            <constraint firstItem="pmR-Os-vRm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="103.5" id="IeD-Gn-Htd"/>
+                            <constraint firstItem="avp-NI-tbT" firstAttribute="baseline" secondItem="f4Z-Am-Da4" secondAttribute="baseline" id="KNA-8g-w8o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="avp-NI-tbT" secondAttribute="bottom" constant="32" id="Kfm-YL-DAz"/>
+                            <constraint firstItem="avp-NI-tbT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-96.5" id="PH7-HM-Rcf"/>
+                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VG2-IM-af6"/>
+                            <constraint firstItem="avp-NI-tbT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-96.5" id="YH6-jB-Agz"/>
+                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="centerX" secondItem="f4Z-Am-Da4" secondAttribute="centerX" constant="-2" id="a9M-Z6-tTg"/>
+                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lOH-Ri-Awn"/>
+                            <constraint firstItem="pmR-Os-vRm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="103.5" id="nIc-81-JMl"/>
+                            <constraint firstItem="Csu-Kb-YUf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p6t-ac-OuO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -35,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="286"/>
+            <point key="canvasLocation" x="75" y="260"/>
         </scene>
     </scenes>
 </document>

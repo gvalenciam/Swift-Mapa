@@ -23,6 +23,22 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     var totalDistance : Double = 0
     let regionRadius: CLLocationDistance = 1500
     
+    
+    @IBAction func Standard()
+    {
+        Mapa.mapType = MKMapType.Standard
+    }
+    
+    @IBAction func Satelite()
+    {
+        Mapa.mapType = MKMapType.Satellite
+    }
+    
+    @IBAction func Hibrido()
+    {
+        Mapa.mapType = MKMapType.Hybrid
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -49,9 +65,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
-        //Mapa.mapType = MKMapType.Standard
-        //Mapa.mapType = MKMapType.Satellite
-        //Mapa.mapType = MKMapType.Hybrid
         
         if(status == .AuthorizedWhenInUse)
         {
